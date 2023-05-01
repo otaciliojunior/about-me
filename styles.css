@@ -1,0 +1,46 @@
+/* Reset de estilos */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+/* Botão de toggle */
+#toggle-button {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 2;
+	padding: 10px 20px;
+	border: none;
+	background-color: #1b1b1b;
+	color: #fff;
+	cursor: pointer;
+}
+
+/* Container animado */
+#animated-container {
+	position: fixed;
+	top: 0;
+	right: -300px; /* começa fora da tela */
+	width: 300px;
+	height: 100%;
+	background-color: #1b1b1b;
+	z-index: 1;
+	transition: all 0.5s ease-out; /* transição de 0.5 segundos */
+}
+
+/* Conteúdo dentro do container animado */
+#info-container {
+	padding: 20px;
+	background-color: #fff;
+}
+
+/* Classe que adiciona o deslocamento do container */
+#animated-container.open {
+	right: 0;
+}
